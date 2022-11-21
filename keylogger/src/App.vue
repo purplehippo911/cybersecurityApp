@@ -1,20 +1,19 @@
 <template>
   <header>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
   </header>
   <router-view />
   <footer>
-    <MainFooter/>
+    <MainFooter />
   </footer>
-
 </template>
 
 <script>
-  import MainFooter from './components/MainFooter.vue';
-  export default {
+import MainFooter from "./components/MainFooter.vue";
+export default {
   name: "App",
   components: {
     MainFooter,
@@ -25,29 +24,31 @@
 <style lang="scss">
 @import "_variables";
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin:0 auto;
-  display:flex;
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
-  gap:5rem;
+  gap: 5rem;
   color: $VueGrey;
 }
-header{
-  width:100%;
-  padding:2rem;
-  display:flex;
+header {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
   justify-content: center;
-  font-size:2em;
+  font-size: 2em;
 }
 nav {
   padding: 3rem;

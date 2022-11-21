@@ -3,18 +3,19 @@
     <div class="container row">
       <div class="hero">
         <div class="container grid">
-
           <h1 class="hero__title">KeyLogger</h1>
           <picture>
-            <img src="https://media.discordapp.net/attachments/1043764997903368205/1044214774176694292/Vindicator.png" alt="our logo">
+            <img
+              src="https://media.discordapp.net/attachments/1043764997903368205/1044214774176694292/Vindicator.png"
+              alt="our logo"
+            />
           </picture>
           <div class="hero__info">
             <p class="info__p">
-              Try out our KeyLogger. It logs everything you write and can be used to ....
+              Try out our KeyLogger. It logs everything you write and can be
+              used to ....
             </p>
-            <button class="hero__button" download="">
-              Download it
-            </button>
+            <button class="hero__button" download="">Download it</button>
           </div>
         </div>
       </div>
@@ -24,81 +25,80 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "HomeView",
-  components: {
-    HelloWorld,
-  },
+  components: {},
 };
 </script>
 
 <style scoped lang="scss">
 @import "../variables";
-  .home {
-    width:100%;
-    color:black;
-    .container{
-      max-width:80%;
-      margin:0 auto;
-      .hero{
-        border:10px solid $VueGreen;
-        background:aliceblue;
-        width: 80%;
-        border-radius: 20px;
-        .hero__title{
-          font-size:1.9em;
-          grid-column:span 2;
-          justify-self:center;
-          display:flex;
-          flex-direction: column;
-          align-items: center;
-          &::before, &::after {
-            content:"";
-            width:100%;
-            padding:.5rem;
-            background: white;
-          }
-        }
-        picture, .hero__info {
-          width:50%;
-          text-align:center;
-          display:flex;
-          flex-direction: column;
-          align-items: center;
-          &-right {
-            justify-self:end;
-          }
-        }
-        .grid{
-          display:grid;
-          grid-template-columns:repeat(2, 2fr);
+.home {
+  width: 100%;
+  color: black;
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+    .hero {
+      border: 10px solid $VueGreen;
+      background: aliceblue;
+      width: 80%;
+      border-radius: 20px;
+      .hero__title {
+        font-size: 1.9em;
+        grid-column: span 2;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &::before,
+        &::after {
+          content: "";
+          width: 100%;
+          padding: 0.5rem;
+          background: white;
         }
       }
+      picture,
+      .hero__info {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-right {
+          justify-self: end;
+        }
       }
-      .row {
-        display:flex;
-        justify-content: center;
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
       }
+    }
   }
-  h3 {
-    margin: 40px 0 0;
+  .row {
+    display: flex;
+    justify-content: center;
   }
-  ul {
-    list-style-type: none;
-    padding: 2rem;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
+}
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 2rem;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
 
-  svg, img {
-    max-width:100%;
-  }
+svg,
+img {
+  max-width: 100%;
+}
 </style>
-
