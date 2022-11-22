@@ -1,11 +1,13 @@
 <template>
   <header>
     <nav>
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
     </nav>
   </header>
-  <router-view />
+  <main>
+    <router-view />
+  </main>
   <footer>
     <MainFooter />
   </footer>
@@ -22,8 +24,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "_variables";
-
+@import "_mixins.scss";
+@import "_variables.scss";
 *,
 *::before,
 *::after {
@@ -35,27 +37,30 @@ body {
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
   color: $VueGrey;
+  @include flex(column, 5rem, stretch, stretch);
+}
+a {
+  text-decoration: none;
 }
 header {
   width: 100%;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
   font-size: 2em;
+  background:black;
+  @include flex(2rem, center, center);
 }
 nav {
-  padding: 3rem;
-
+  padding: 5rem;
+  width:50%;
+  @include flex($gap:5rem, $justify:center, $align:center);
+  @media screen and (max-width: 600px) {
+    padding:2rem;
+    @include flex(column, 3rem, center, center);
+  }
   a {
     font-weight: bold;
-    color: $VueGrey;
+    color: whitesmoke;
 
     &.router-link-exact-active {
       color: $VueGreen;

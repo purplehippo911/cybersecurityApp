@@ -44,8 +44,13 @@
         </ul>
       </div>
 
+      <div class="footer__about"></div>
+
       <div class="socials socials-right">
-        <h3 class="socials__title">SolarisX1337</h3>
+        <div class="socials__profile">
+          <h3 class="socials__title">SolarisX1337</h3>
+          <img src="" alt="Solaris's logo" />
+        </div>
         <ul class="footer__list">
           <li class="footer__item">
             <a
@@ -94,6 +99,9 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+      @media screen and (max-width: 600px) {
+        grid-column: span 2;
+      }
       &::before,
       &::after {
         content: "";

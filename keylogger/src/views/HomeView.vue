@@ -12,11 +12,10 @@
           </picture>
           <div class="hero__info">
             <p class="info__p">
-              Try out our KeyLogger. It logs everything you write and can be
-              used to ....
+              Try out the Vindicator extension. It's our cybersecurity
             </p>
-            <button class="hero__button" download="">Download it</button>
           </div>
+          <button class="hero__button" download="">Download it</button>
         </div>
       </div>
     </div>
@@ -43,7 +42,7 @@ export default {
     .hero {
       border: 10px solid $VueGreen;
       background: aliceblue;
-      width: 80%;
+
       border-radius: 20px;
       .hero__title {
         font-size: 1.9em;
@@ -52,6 +51,9 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media screen and (max-width: 600px) {
+          grid-column: 1 / -1;
+        }
         &::before,
         &::after {
           content: "";
@@ -70,10 +72,17 @@ export default {
         &-right {
           justify-self: end;
         }
+        .hero__button {
+          grid-column: span 2;
+        }
       }
       .grid {
         display: grid;
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+        @media screen and (max-width: 600px) {
+          grid-template-columns: repeat(1, minmax(300px, 1fr));
+          grid-template-rows: repeat(3, 300px);
+        }
       }
     }
   }
