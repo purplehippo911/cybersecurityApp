@@ -37,30 +37,27 @@ body {
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: $VueGrey;
-  @include flex(column, 5rem, stretch, stretch);
+  color: $Black;
+  @include flex(column, 6rem, stretch, stretch);
 }
 a {
   text-decoration: none;
 }
 header {
-  width: 100%;
-  padding: 2rem;
+  @include mainArticle(100%, 2rem, $Black);
   font-size: 2em;
-  background:black;
   @include flex(2rem, center, center);
 }
 nav {
-  padding: 5rem;
-  width:50%;
-  @include flex($gap:5rem, $justify:center, $align:center);
+  @include mainArticle(80%, 5rem);
+  @include flex($gap: 5rem, $justify: center, $align: center);
   @media screen and (max-width: 600px) {
-    padding:2rem;
+    padding: 2rem;
     @include flex(column, 3rem, center, center);
   }
   a {
     font-weight: bold;
-    color: whitesmoke;
+    color: $White;
 
     &.router-link-exact-active {
       color: $VueGreen;

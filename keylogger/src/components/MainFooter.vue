@@ -4,7 +4,13 @@
       <h2 class="footer__title">This was made by</h2>
 
       <div class="socials socials-left">
-        <h3 class="socials__title">Purplehippo911</h3>
+        <div class="socials__profile">
+          <h3 class="socials__title">Purplehippo911</h3>
+          <img
+            href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngitem.com%2Fmiddle%2Fhhwmxxh_shyguycttt-artwork-super-mario-party-shy-guy-hd%2F&psig=AOvVaw2QRReBnLl8AdPNRbl8aqLH&ust=1669232651107000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCPCVuazGwvsCFQAAAAAdAAAAABAE"
+            alt="Purplehippo's profile picture"
+          />
+        </div>
         <ul class="footer__list">
           <li class="footer__item">
             <a
@@ -44,13 +50,16 @@
         </ul>
       </div>
 
-      <div class="footer__about"></div>
+      <div class="footer__about">
+        <img src="" alt="" />
+      </div>
 
       <div class="socials socials-right">
         <div class="socials__profile">
           <h3 class="socials__title">SolarisX1337</h3>
-          <img src="" alt="Solaris's logo" />
+          <img href="https://bit.ly/3tTAnFo" alt="Solaris's profile picture" />
         </div>
+
         <ul class="footer__list">
           <li class="footer__item">
             <a
@@ -83,31 +92,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../variables";
+@import "../mixins";
 .footer {
-  width: 100%;
-  padding: 1rem 0;
-  background: $VueGreen;
-  border: 2px solid $VueGrey;
+  @include mainArticle(100%, 1rem 0, $VueGreen);
+  //border: 10px solid $Black;
   .container {
     max-width: 60%;
     margin: 0 auto;
 
     .footer__title {
       font-size: 1.9em;
-      grid-column: span 2;
+      grid-column: 1 / -1;
       justify-self: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       @media screen and (max-width: 600px) {
-        grid-column: span 2;
+        grid-column: span 1;
       }
       &::before,
       &::after {
         content: "";
         width: 100%;
         padding: 0.5rem;
-        background: white;
+        background: $White;
       }
     }
     .socials {
@@ -123,7 +131,7 @@ export default {
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(3, 2fr);
   }
 }
 h3 {

@@ -3,7 +3,7 @@
     <div class="container row">
       <div class="hero">
         <div class="container grid">
-          <h1 class="hero__title">KeyLogger</h1>
+          <h1 class="hero__title">Vindicator</h1>
           <picture>
             <img
               src="https://media.discordapp.net/attachments/1043764997903368205/1044214774176694292/Vindicator.png"
@@ -12,7 +12,12 @@
           </picture>
           <div class="hero__info">
             <p class="info__p">
-              Try out the Vindicator extension. It's our cybersecurity
+              Try out the Vindicator extension. It's our cybersecurity app,
+              which can help you with saving your form info's. It has IP loggers
+              and revenant framework's cookies, which can help you find out
+              where you are. We will only be able to view your IP address and we
+              will take care of it as if it were our own children. Test us out!
+              Safe and secure?
             </p>
           </div>
           <button class="hero__button" download="">Download it</button>
@@ -33,16 +38,15 @@ export default {
 
 <style scoped lang="scss">
 @import "../variables";
+@import "../_mixins";
 .home {
-  width: 100%;
-  color: black;
+  @include mainArticle(100%, 3rem);
+  @include flex($gap: 2rem, $justify: center, $align: center);
   .container {
     max-width: 80%;
-    margin: 0 auto;
     .hero {
-      border: 10px solid $VueGreen;
-      background: aliceblue;
-
+      border: 10px solid $Black;
+      background: $VueGreen;
       border-radius: 20px;
       .hero__title {
         font-size: 1.9em;
@@ -59,7 +63,7 @@ export default {
           content: "";
           width: 100%;
           padding: 0.5rem;
-          background: white;
+          background: $White;
         }
       }
       picture,
@@ -78,11 +82,7 @@ export default {
       }
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-        @media screen and (max-width: 600px) {
-          grid-template-columns: repeat(1, minmax(300px, 1fr));
-          grid-template-rows: repeat(3, 300px);
-        }
+        @include grid(auto-fit, 300px, 2fr);
       }
     }
   }
