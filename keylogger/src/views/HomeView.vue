@@ -90,15 +90,11 @@ export default {
           }
         }
       }
-      form {
-        width: 100%;
-        @include flex($gap: 0, $justify: center);
-        margin-bottom: 1rem;
-      }
       .hero__button {
         grid-column: span 2;
         @include btnStyle(100%, $White, $VueGreen, 1rem 0.5rem);
         &.about {
+          margin-bottom: 1rem;
           @include btnStyle(80%, $White, $Black, 1rem 0.5rem);
         }
       }
