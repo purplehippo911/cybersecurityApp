@@ -38,7 +38,7 @@ body {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: $Black;
-  @include flex(column, 6rem, stretch, stretch);
+  @include flex($direction: column, $gap: 6rem);
 }
 a {
   text-decoration: none;
@@ -46,14 +46,19 @@ a {
 header {
   @include mainArticle(100%, 2rem, $Black);
   font-size: 2em;
-  @include flex(2rem, center, center);
+  @include flex($gap: 2rem, $justify: center);
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 nav {
   @include mainArticle(80%, 5rem);
-  @include flex($gap: 5rem, $justify: center, $align: center);
+  @include flex($gap: 5rem, $justify: center);
   @media screen and (max-width: 600px) {
     padding: 2rem;
-    @include flex(column, 3rem, center, center);
+    @include flex($direction: column, $gap: 3rem, $justify: center);
   }
   a {
     font-weight: bold;
