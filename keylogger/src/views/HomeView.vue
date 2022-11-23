@@ -52,47 +52,53 @@ export default {
   .container {
     width: 80%;
     .hero {
-      border: 10px solid $Black;
       background: $VueGreen;
       color: $Black;
+      box-shadow:10px 10px $Black;
       border-radius: 20px;
       @include flex($gap: 0, $justify: center);
       .hero__info {
-        @include flex(column, 2rem, center);
+        @include flex(column, 1rem, center);
         padding: 2rem;
         .hero__title {
           font-size: 2.5em;
-          margin-bottom: 0;
           color: $White;
+          margin-bottom:0;
         }
-        .info-p {
-          margin-top: 0;
-          width: 70%;
-          padding: 2rem;
+        .info__p {
+          margin: 0;
+          padding: .5rem;
           opacity: 0.5;
         }
       }
 
       picture {
         padding: 2rem;
+        margin:0;
         align-self: center;
+        @media screen and (max-width: 600px) {
+          margin:2rem 0;
+          padding: 0;
+        }
         img {
           border-radius: 20px;
+          box-shadow:10px 10px $Black;
         }
       }
       form {
         width: 100%;
         @include flex($gap: 0, $justify: center);
+        margin-bottom:1rem;
       }
       .hero__button {
         grid-column: span 2;
-        @include btnStyle(100%, $Black, $White, 1rem 0.5rem);
+        @include btnStyle(100%, $White, $VueGreen, 1rem 0.5rem);
         &.about {
           @include btnStyle(80%, $White, $Black, 1rem 0.5rem);
         }
       }
       .grid {
-        @include grid(2, 300px, 1fr);
+        @include grid(auto-fit, 300px, 1fr);
         justify-content: center;
       }
     }

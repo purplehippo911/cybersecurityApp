@@ -105,6 +105,9 @@ export default {
 .footer {
   @include mainArticle(100%, 1rem 0, $VueGreen);
   @include flex(row, $justify: center);
+  @media screen and (max-width: 600px) {
+    padding:0;
+  }
   .container {
     max-width: 80%;
 
@@ -114,12 +117,12 @@ export default {
       @include flex(column, $gap: 0, $justify: center);
       @media screen and (max-width: 600px) {
         grid-column: span 1;
-      }
+    }
       &::before,
       &::after {
         content: "";
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.5rem 0;
         background: $White;
       }
     }
@@ -137,7 +140,11 @@ export default {
         width:100%;
         
         img {
+          box-shadow:10px 10px $Black;
           border-radius: 20px;
+          &[alt="Solaris's profile picture"] {
+            box-shadow:10px 10px $VueGrey;
+          }
         }
         svg,
         img {
@@ -172,6 +179,10 @@ export default {
     .grid {
       @include grid(3, $max:1fr);
       align-items: center;
+      @media screen and (max-width: 600px) {
+        @include grid(1, $max:1fr);
+        justify-items:center;
+      }
     }
   h3 {
     margin: 2rem 0 .5rem 0;
