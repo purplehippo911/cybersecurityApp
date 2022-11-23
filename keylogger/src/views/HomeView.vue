@@ -7,6 +7,7 @@
             <img
               src="https://media.discordapp.net/attachments/1043764997903368205/1044214774176694292/Vindicator.png"
               alt="our logo"
+              class="logo"
             />
           </picture>
           <div class="hero__info">
@@ -19,11 +20,9 @@
               will take care of it as if it were our own children. Test us out!
               Safe and secure?
             </p>
-            <form action="/about">
-              <button class="hero__button about" src="/about">
-                Learn more
-              </button>
-            </form>
+            <button class="hero__button about" @click="$router.push('about')">
+              Learn more
+            </button>
             <button class="hero__button" download="" target="_blank">
               Download it
             </button>
@@ -74,8 +73,8 @@ export default {
 
       picture {
         padding: 2rem;
-        margin: 0;
-        align-self: center;
+        margin: 0 auto;
+        @include flex(row, $justify: center);
         @media screen and (max-width: 600px) {
           margin: 2rem 0;
           padding: 0;
@@ -83,6 +82,12 @@ export default {
         img {
           border-radius: 20px;
           box-shadow: 10px 10px $Black;
+        }
+        .logo {
+          @media screen and (max-width: 600px) {
+            margin: 4rem 0 0;
+            width: 80%;
+          }
         }
       }
       form {
