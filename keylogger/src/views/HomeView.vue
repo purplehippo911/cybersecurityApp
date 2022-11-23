@@ -54,7 +54,7 @@ export default {
     .hero {
       background: $VueGreen;
       color: $Black;
-      box-shadow:10px 10px $Black;
+      box-shadow: 10px 10px $Black;
       border-radius: 20px;
       @include flex($gap: 0, $justify: center);
       .hero__info {
@@ -63,32 +63,32 @@ export default {
         .hero__title {
           font-size: 2.5em;
           color: $White;
-          margin-bottom:0;
+          margin-bottom: 0;
         }
         .info__p {
           margin: 0;
-          padding: .5rem;
+          padding: 0.5rem;
           opacity: 0.5;
         }
       }
 
       picture {
         padding: 2rem;
-        margin:0;
+        margin: 0;
         align-self: center;
         @media screen and (max-width: 600px) {
-          margin:2rem 0;
+          margin: 2rem 0;
           padding: 0;
         }
         img {
           border-radius: 20px;
-          box-shadow:10px 10px $Black;
+          box-shadow: 10px 10px $Black;
         }
       }
       form {
         width: 100%;
         @include flex($gap: 0, $justify: center);
-        margin-bottom:1rem;
+        margin-bottom: 1rem;
       }
       .hero__button {
         grid-column: span 2;
