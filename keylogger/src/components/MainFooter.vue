@@ -89,6 +89,7 @@
       <a
         class="footer__link--last"
         href="https://github.com/purplehippo911/cybersecurityapp"
+        
       >
         <strong>
           Code for this project on GitHub.

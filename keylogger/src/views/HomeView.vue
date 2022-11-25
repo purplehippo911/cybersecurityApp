@@ -42,14 +42,16 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "../variables";
 @import "../_mixins";
+@import "../themes";
+
 .home {
   @include mainArticle(100%, 2rem);
-  @include flex($gap: 2rem, $justify: center);
   .container {
     width: 80%;
+    margin: 0 auto;
     .hero {
       background: $VueGreen;
       color: $Black;
