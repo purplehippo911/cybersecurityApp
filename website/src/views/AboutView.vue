@@ -54,10 +54,14 @@
 </template>
 
 <style lang="scss">
-@import "../_variables";
-@import "../_mixins";
+@import "../sass/_variables";
+@import "../sass/_mixins";
+@import "../sass/_themes";
+
 .about {
-  width: 100%;
+ 
+ 
+ width: 100%;
 
   .container {
     width: 80%;

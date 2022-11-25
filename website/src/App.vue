@@ -68,8 +68,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "_mixins.scss";
-@import "_variables.scss";
+@import "./sass/_mixins";
+@import "./sass/_variables";
+@import "./sass/_themes";
 
 *,
 *::before,

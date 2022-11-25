@@ -43,9 +43,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../variables";
-@import "../_mixins";
-@import "../themes";
+@import "../sass/variables";
+@import "../sass/_mixins";
+@import "../sass/_themes ";
 
 .home {
   @include mainArticle(100%, 2rem);

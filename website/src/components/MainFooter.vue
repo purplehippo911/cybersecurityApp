@@ -116,8 +116,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "../variables";
-@import "../mixins";
+@import "../sass/variables";
+@import "../sass/mixins";
+@import "../sass/themes";
 
 .grid {
   @include grid(3, $max: 1fr);
@@ -239,3 +240,10 @@ h3 {
   }
 }
 </style>
+ 10px;
+  }
+  a {
+    color: #42b983;
+  }
+  </style>
+  
