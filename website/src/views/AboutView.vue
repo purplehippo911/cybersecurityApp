@@ -59,9 +59,7 @@
 @import "../sass/_themes";
 
 .about {
- 
- 
- width: 100%;
+  width: 100%;
 
   .container {
     width: 80%;

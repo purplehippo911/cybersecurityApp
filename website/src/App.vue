@@ -3,23 +3,23 @@
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
-      <div class="slider">
-        <div class="slider__numbers">
-          <strong> 1 </strong>
-          <strong> 2 </strong>
-          <strong> 3 </strong>
-        </div>
-        <div class="slider__item" v-on:click="toggleOpen">
-          <strong class="slider__ball" v-on:click="toggleOpen" ref="slider">
-          </strong>
-        </div>
-      </div>
-      <!--<div class="text">
-        {{ column }}
-      </div> -->
     </nav>
   </header>
   <main>
+    <div class="slider">
+      <div class="slider__numbers">
+        <strong> 1 </strong>
+        <strong> 2 </strong>
+        <strong> 3 </strong>
+      </div>
+      <div class="slider__item" v-on:click="toggleOpen">
+        <strong class="slider__ball" v-on:click="toggleOpen" ref="slider">
+        </strong>
+      </div>
+    </div>
+    <!--<div class="text">
+        {{ column }}
+      </div> -->
     <router-view />
   </main>
   <footer>
@@ -103,44 +103,51 @@ header {
     a {
       font-weight: bold;
       color: $White;
-      
+
       &.router-link-exact-active {
         color: $VueGreen;
       }
     }
-    .slider {
-      margin-left: 1.5rem;
-      width: 15%;
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-      
-      .slider__item,
-      .slider__numbers {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: center;
-        justify-items: center;
-      }
-      .slider__numbers {
-        color: $White;
-      }
-      .slider__item {
-        background: $VueGrey;
-        padding: 0.2rem;
-        border-radius: 20px;
-        .slider__ball {
-          background: $White;
-          width: auto;
-          padding: 0.8rem;
-          border-radius: 50%;
-          transition: 0.5s;
-          grid-column: 0;
-        }
-      }
+  }
+}
+
+main {
+  @include flex($direction: column, $gap: 2rem, $justify: center);
+}
+
+.slider {
+  align-self: center;
+  margin-left: 1.5rem;
+  width: 15%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+
+  .slider__item,
+  .slider__numbers {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  .slider__numbers {
+    color: $VueGrey;
+  }
+  .slider__item {
+    background: $VueGrey;
+    padding: 0.2rem;
+    border-radius: 20px;
+    .slider__ball {
+      background: $White;
+      width: auto;
+      padding: 0.8rem;
+      border-radius: 50%;
+      transition: 0.5s;
+      grid-column: 0;
     }
   }
 }
+
 footer {
   width: 100%;
   display: flex;
@@ -152,5 +159,4 @@ footer {
   background: red;
   color: $White;
 }
-@import "_themes.scss";
 </style>
