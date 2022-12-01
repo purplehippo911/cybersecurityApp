@@ -1,69 +1,150 @@
-/*.dark{
-}*/
 @import "./_variables";
+
 .light{
     background:$Theme2Bg;
     color:$KeyText2;
     header {
+        background:$White;
         color:$KeyText2;
-        .slider__item {
-            background:$KeypadBg2;
-        }
-    }
-    footer {
-        background: $KeypadBg2;
-        button {
-            background:$KeyBg2;
-            color:$KeyText2;
-            box-shadow:0px 4px 0px 0px $KeyShadow2;
-        }
-        #reset, #del {
-            background:$ResetBg2;
-            box-shadow:0px 4px 0px 0px $ResetShadow2;
+            a {
+              font-weight: bold;
+              color: $KeyText2;
+        
+              &.router-link-exact-active {
+                color: $ResetBg2;
+              }
+            }
         }
         
-        #sum {
-            background:$SumBg2;
-            box-shadow:0px 4px 0px 0px $SumShadow2;
+        .slider {
+            .slider__numbers {
+                color: $VueGreen;
+            }
+            .slider__item {
+                background: $White;
+                .slider__ball {
+                    background: $VueGrey;
+                }
+            }
+  }
+
+  main {
+      .home {
+          .hero{
+              background:$ResetBg2;
+              color:$White;
+              .hero__info {
+                  .hero__title {
+                    color:$Black;
+                  }
+                  .hero__button {
+                      background:$Black;
+                      background:$SumBg3;
+                      color:$White;
+                      box-shadow:0px 4px 0px 0px $KeyText2;
+                      &.about {
+                          @include btnStyle(80%, $Black, $SumBg2, 1rem 0.5rem, $VueGreen);
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .about {
+            .about-section {
+                background:$ResetBg2;
+            }
+        }
+    }
+        
+    footer {
+        .footer {
+            background: $VueGreen;
+            background:$White;
+            color:$VueGrey;
+            a {
+                color:$Theme2Bg;
+            }
         }
     }
 }
 
 .neon {
-    background:$Theme3Bg;
-    color:$KeyText3;
-    .calculator__top {
+    background: $Theme3Bg;
+    header {
+        background: $SumBg3;
+        background: $KeyShadow3;
         color:$KeyText3;
-        .slider__item {
-            background:$KeypadBg3;
-            .slider__ball {
-                background: $SumBg3;
+            a {
+              font-weight: bold;
+              color: $White;
+        
+              &.router-link-exact-active {
+                color: $Black;
+              }
             }
         }
-    }
-    .calculator__screen {
-        background: $KeypadBg3;
-    }
-    .calculator__bottom {
-        background: $KeypadBg3;
-        .calculator__buttons input {
-            background:$KeyBg3;
-            color:$KeyText3;
-            box-shadow:0px 4px 0px 0px $KeyShadow3;
-        }
         
-        #reset, #del {
+        .slider {
+            .slider__numbers {
+                color: $KeyText3;
+            }
+            .slider__item {
+                background: $White;
+                .slider__ball {
+                    background: $KeyText3;
+                }
+            }
+  }
+  
+  main{
+      
+      .home {
+          .hero{
+              background: $SumBg3;
+              color:$KeyText2;
+              .hero__info {
+                  
+                  .hero__button {
+                      color:$Black;
+                      background: $KeyText3;
+                      box-shadow:0px 4px 0px 0px $KeyShadow3;
+                      &.about {
+                          @include btnStyle(80%, $SumBg3, $Black, 1rem 0.5rem, $KeyShadow3);
+                          background:$KeyShadow3;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .about {
+            .container {
+                .about__title {
+                    color:$KeyText3;
+                }
+              .about-section {
+                background: $SumBg3;
+                color:$ResetBg3;
+                .section__title {
+                    color:$KeyText3;
+                }
+              }
+            }
+        }
+          
+    }
+    
+    
+    footer {
+        .footer {
+            background: $KeyShadow3;
             background:$ResetBg3;
-            box-shadow:0px 4px 0px 0px $ResetShadow3;
+            color:$White;
+            a {
+                color:$Theme2Bg;
+            }
         }
-        
-        #sum {
-            background:$SumBg3;
-            box-shadow:0px 4px 0px 0px $SumShadow3;
-
         }
-    }
-    .attributes a {
-        color:$Theme2Bg;
-    }
 }

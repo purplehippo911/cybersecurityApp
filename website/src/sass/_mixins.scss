@@ -22,14 +22,13 @@
     }
 }
 
-@mixin btnStyle($width, $background, $color, $padding) {
+@mixin btnStyle($width, $background, $color, $padding, $shadow) {
     width:$width;
     background:$background;
     color:$color;
     padding:$padding;
     border:0;
     border-radius:20px;
-    box-shadow: 10px 10px $Black;
     text-transform:uppercase;
     font-size:1rem;
     font-weight:800;
@@ -37,7 +36,6 @@
     &:hover, &:active, &:focus-within, &:target {
         background:$color;
         color:$background;
-        box-shadow: -10px -10px $VueGrey;
-        border:5px solid $VueGrey;
+        box-shadow: -10px -10px $shadow;
     }
 }

@@ -1,7 +1,19 @@
 <template>
   <div class="about">
     <div class="container row">
-      <h1>About Us</h1>
+      <section class="about-section about-section--product-info">
+        <div class="container row">
+          <h2 class="section__title">
+          More info about Vindicator
+          </h2>
+          <p class="section__info">
+            Internet security is a big issue for anyone who spends any time online. There are all sorts of shady people out there who would love to steal your data or cause you other harm. Thankfully, there are a few great tools available to help keep you safe. The most important of these is undoubtedly a good antivirus program, and there are many good ones on the market. However, the best way to prevent hacks and other online threats is to use a good internet security extension like Vindicator Formlogger.
+            This extension will help you track all the forms and forms-related activity that happens on your website. This can be invaluable information if you're ever worried about data breaches or other malicious activities. Formlogger also keeps track of who has access to which forms, making it easy to identify potential pests and enforce policy accordingly. Overall, using an internet security extension like Vindicator Formlogger is one of the best things you can do to stay safe online.
+            Internet security extensions like Vindicator and Formlogger can help you keep your online activity and data safe by detecting and preventing malicious activities before they happen. Formlogger is especially useful for gathering logs of user activity, which can help identify security threats and potential problems early on.
+          </p>
+          </div>
+      </section>
+      <h1 class="about__title">About Us</h1>
 
       <section class="about-section">
         <div class="container row">
@@ -68,6 +80,13 @@
 
     .about-section {
       background: $VueGreen;
+      border-radius:20px;
+    }
+
+    picture {
+      img {
+        border-radius:20px;
+      }
     }
   }
 

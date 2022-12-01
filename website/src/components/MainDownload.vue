@@ -11,12 +11,11 @@
       <div class="hero__info">
         <h1 class="hero__title">Vindicator</h1>
         <p class="info__p">
-          Try out the Vindicator extension. It's our cybersecurity app, which
-          can help you with saving your form info's. It has IP loggers and
-          revenant framework's cookies, which can help you find out where you
-          are. We will only be able to view your IP address and we will take
-          care of it as if it were our own children. Test us out! Safe and
-          secure?
+          There is simply no substitute for proper online security, and the best
+          way to stay safe on the internet is to use a security extension like
+          Vindicator. Our formlogger automates the process of logging in and out
+          of your accounts, tracking your activities on the web to ensure you're
+          staying safe.
         </p>
         <button class="hero__button about" @click="$router.push('about')">
           Learn more

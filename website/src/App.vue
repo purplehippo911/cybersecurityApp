@@ -87,7 +87,10 @@ a {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: $Black;
-  @include flex($direction: column, $gap: 6rem);
+  @include flex($direction: column, $gap: 3rem);
+  &.dark {
+    background: $KeyBg2;
+  }
 }
 header {
   @include mainArticle(100%, 2rem, $Black);
@@ -117,8 +120,7 @@ main {
 
 .slider {
   align-self: center;
-  margin-left: 1.5rem;
-  width: 15%;
+  width: 10%;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
 
@@ -132,10 +134,13 @@ main {
   }
   .slider__numbers {
     color: $VueGrey;
+    align-self: center;
   }
   .slider__item {
+    width: 80%;
+    justify-self: center;
     background: $VueGrey;
-    padding: 0.2rem;
+    padding: 0.1rem;
     border-radius: 20px;
     .slider__ball {
       background: $White;
@@ -144,6 +149,7 @@ main {
       border-radius: 50%;
       transition: 0.5s;
       grid-column: 0;
+      box-shadow:-1px -1px $Black;
     }
   }
 }

@@ -71,10 +71,10 @@ export default {
       }
       .hero__button {
         grid-column: span 2;
-        @include btnStyle(100%, $White, $VueGreen, 1rem 0.5rem);
+        @include btnStyle(100%, $White, $Black, 1rem 0.5rem, $Black);
         &.about {
           margin-bottom: 1rem;
-          @include btnStyle(80%, $White, $Black, 1rem 0.5rem);
+          @include btnStyle(80%, $White, $VueGreen, 1rem 0.5rem, $VueGrey);
         }
       }
       .grid {
