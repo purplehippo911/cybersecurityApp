@@ -149,7 +149,7 @@ main {
       border-radius: 50%;
       transition: 0.5s;
       grid-column: 0;
-      box-shadow:-1px -1px $Black;
+      box-shadow: -1px -1px $Black;
     }
   }
 }
@@ -160,9 +160,8 @@ footer {
   justify-content: center;
 }
 
-.text {
-  width: 100%;
-  background: red;
-  color: $White;
+svg,
+img {
+  max-width: 100%;
 }
 </style>

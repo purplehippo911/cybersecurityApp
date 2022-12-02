@@ -90,8 +90,4 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-svg,
-img {
-  max-width: 100%;
-}
 </style>

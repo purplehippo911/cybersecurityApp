@@ -2,16 +2,16 @@
 
 .light{
     background:$Theme2Bg;
-    color:$KeyText2;
+    color:$TextColor2;
     header {
         background:$White;
-        color:$KeyText2;
+        color:$TextColor2;
             a {
               font-weight: bold;
-              color: $KeyText2;
+              color: $TextColor2;
         
               &.router-link-exact-active {
-                color: $ResetBg2;
+                color: $DarkBlue;
               }
             }
         }
@@ -31,7 +31,7 @@
   main {
       .home {
           .hero{
-              background:$ResetBg2;
+              background:$DarkGreen;
               color:$White;
               .hero__info {
                   .hero__title {
@@ -39,11 +39,11 @@
                   }
                   .hero__button {
                       background:$Black;
-                      background:$SumBg3;
+                      background:$LightBlue;
                       color:$White;
-                      box-shadow:0px 4px 0px 0px $KeyText2;
+                      box-shadow:0px 4px 0px 0px $TextColor2;
                       &.about {
-                          @include btnStyle(80%, $Black, $SumBg2, 1rem 0.5rem, $VueGreen);
+                          @include btnStyle(80%, $Black, $LightBlue, 1rem 0.5rem, $VueGreen);
                         }
                     }
                 }
@@ -53,7 +53,7 @@
 
         .about {
             .about-section {
-                background:$ResetBg2;
+                background:$DarkGreen;
             }
         }
     }
@@ -73,9 +73,9 @@
 .neon {
     background: $Theme3Bg;
     header {
-        background: $SumBg3;
-        background: $KeyShadow3;
-        color:$KeyText3;
+        background: $LightBlue;
+        background: $DarkPurple;
+        color:$TextColor3;
             a {
               font-weight: bold;
               color: $White;
@@ -88,12 +88,12 @@
         
         .slider {
             .slider__numbers {
-                color: $KeyText3;
+                color: $TextColor3;
             }
             .slider__item {
                 background: $White;
                 .slider__ball {
-                    background: $KeyText3;
+                    background: $TextColor3;
                 }
             }
   }
@@ -102,17 +102,17 @@
       
       .home {
           .hero{
-              background: $SumBg3;
-              color:$KeyText2;
+              background: $LightBlue;
+              color:$TextColor2;
               .hero__info {
                   
                   .hero__button {
                       color:$Black;
-                      background: $KeyText3;
-                      box-shadow:0px 4px 0px 0px $KeyShadow3;
+                      background: $TextColor3;
+                      box-shadow:0px 4px 0px 0px $DarkPurple;
                       &.about {
-                          @include btnStyle(80%, $SumBg3, $Black, 1rem 0.5rem, $KeyShadow3);
-                          background:$KeyShadow3;
+                          @include btnStyle(80%, $LightBlue, $Black, 1rem 0.5rem, $DarkPurple);
+                          background:$DarkPurple;
                         }
                     }
                 }
@@ -122,13 +122,13 @@
         .about {
             .container {
                 .about__title {
-                    color:$KeyText3;
+                    color:$TextColor3;
                 }
               .about-section {
-                background: $SumBg3;
-                color:$ResetBg3;
+                background: $LightBlue;
+                color:$DarkGreen;
                 .section__title {
-                    color:$KeyText3;
+                    color:$TextColor3;
                 }
               }
             }
@@ -139,8 +139,8 @@
     
     footer {
         .footer {
-            background: $KeyShadow3;
-            background:$ResetBg3;
+            background: $DarkPurple;
+            background:$LightBlue;
             color:$White;
             a {
                 color:$Theme2Bg;
