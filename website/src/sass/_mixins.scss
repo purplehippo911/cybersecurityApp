@@ -22,7 +22,7 @@
     }
 }
 
-@mixin btnStyle($width, $background, $color, $padding, $shadow) {
+@mixin btnStyle($width, $background:inherit, $color, $padding, $shadow) {
     width:$width;
     background:$background;
     color:$color;

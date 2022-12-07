@@ -200,6 +200,10 @@ h3 {
     font-weight: 700;
     color: $VueGreen;
     width: 100%;
+    &.footer__link:hover,
+    &.footer__link:focus {
+      opacity: 70%;
+    }
   }
   picture {
     width: 100%;

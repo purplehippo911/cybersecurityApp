@@ -23,7 +23,8 @@ export default {
 @import "../sass/_mixins";
 @import "../sass/_themes";
 
-.home {
+.home,
+.about {
   @include mainArticle(100%, 2rem);
   .container {
     width: 80%;
@@ -45,7 +46,7 @@ export default {
         }
         .info__p {
           margin: 0;
-          padding: 0.5rem;
+          padding:0 2rem;
           opacity: 0.5;
         }
       }
@@ -71,10 +72,16 @@ export default {
       }
       .hero__button {
         grid-column: span 2;
-        @include btnStyle(100%, $White, $Black, 1rem 0.5rem, $Black);
+        @include btnStyle(100%, $White, $Black, 1rem 0.5rem, $White);
         &.about {
           margin-bottom: 1rem;
-          @include btnStyle(80%, $White, $VueGreen, 1rem 0.5rem, $VueGrey);
+          @include btnStyle(
+            $width:80%,
+            $color: $VueGrey,
+            $padding: 1rem 0.5rem,
+            $shadow: $VueGrey
+          );
+          border:2px solid $White;
         }
       }
       .grid {

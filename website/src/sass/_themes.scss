@@ -18,7 +18,7 @@
         
         .slider {
             .slider__numbers {
-                color: $VueGreen;
+                color: $LightBlue;
             }
             .slider__item {
                 background: $White;
@@ -60,9 +60,8 @@
         
     footer {
         .footer {
-            background: $VueGreen;
             background:$White;
-            color:$VueGrey;
+            color:$LightBlue;
             a {
                 color:$Theme2Bg;
             }
@@ -121,26 +120,24 @@
         }
         .about {
             .container {
+                .about-section {
+                    background: $LightBlue;
+                    color:$DarkGreen;
+                    .section__title {
+                        color:$TextColor3;
+                    }
+                }
                 .about__title {
-                    color:$TextColor3;
+                    color:$LightBlue;
                 }
-              .about-section {
-                background: $LightBlue;
-                color:$DarkGreen;
-                .section__title {
-                    color:$TextColor3;
-                }
-              }
             }
         }
           
     }
     
-    
     footer {
         .footer {
             background: $DarkPurple;
-            background:$LightBlue;
             color:$White;
             a {
                 color:$Theme2Bg;

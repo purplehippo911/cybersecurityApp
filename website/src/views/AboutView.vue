@@ -86,27 +86,33 @@
 @import "../sass/_themes";
 
 .about {
-  width: 100%;
+  @include mainArticle(100, 2rem);
 
   .container {
     width: 80%;
-    padding: 2rem;
     margin: 0 auto;
+    text-align: center;
+    .about__title {
+      color:$VueGreen;
+      margin-top:2rem;
+    }
+    section {
+    }
 
-    .about-section {
-      background: $VueGreen;
-      border-radius: 20px;
+    h2 {
+      color:$White;
     }
 
     picture {
-      img {
-        border-radius: 20px;
+      .profile__icon--right {
+        box-shadow: 10px 10px $White;
       }
     }
   }
 
   .row {
-    @include flex(column, 2rem, center);
+    flex-direction: column;
+    gap:4rem;
   }
 }
 </style>
